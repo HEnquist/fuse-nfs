@@ -12,7 +12,7 @@ EXTRA_DIST = \
 	fuse-nfs.pc.in
 
 install-exec-hook:
-	(cd ${bindir}; $(LN_S) fuse-nfs /usr/bin/mount.fuse-nfs)
+	$(LN_S) ${bindir}/fuse-nfs /usr/bin/mount.fuse-nfs
 
 uninstall-hook:
 	rm -f /usr/bin/mount.fuse-nfs
