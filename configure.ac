@@ -70,3 +70,4 @@ AC_CONFIG_FILES([Makefile]
                )
 
 AC_OUTPUT([fuse-nfs.pc])
+AC_PROG_LN_S

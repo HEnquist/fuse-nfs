@@ -10,3 +10,9 @@ EXTRA_DIST = \
 	LICENCE-GPL-3.txt \
 	fuse \
 	fuse-nfs.pc.in
+
+install-exec-hook:
+	(cd ${bindir}; $(LN_S) fuse-nfs /usr/bin/mount.fuse-nfs)
+
+uninstall-hook:
+	rm -f /usr/bin/mount.fuse-nfs
